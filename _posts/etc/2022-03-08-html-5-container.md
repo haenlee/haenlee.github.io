@@ -3,7 +3,7 @@ title:  "[HTML] 컨테이너와 전역 속성"
 excerpt: "HTML 태그 정리"
 
 categories:
-  - ETC
+  - HTML
 tags:
   - [HTML]
 

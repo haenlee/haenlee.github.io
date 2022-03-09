@@ -1,7 +1,7 @@
 ---
 title: "코딩 테스트 강의"
 layout: archive
-permalink: categories/coding-test-lesson
+permalink: /categories/coding-test-lesson
 author_profile: true
 sidebar_main: true
 ---

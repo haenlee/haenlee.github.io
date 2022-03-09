@@ -37,8 +37,13 @@
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">ETC</span>
+        <span class="nav__sub-title">ETC</span>
             <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "HTML" %}
+                        <li><a href="/categories/html" class="">HTML ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
                 {% for category in site.categories %}
                     {% if category[0] == "ETC" %}
                         <li><a href="/categories/etc" class="">ETC ({{category[1].size}})</a></li>
