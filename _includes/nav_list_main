@@ -13,8 +13,17 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        
+        <span class="nav__sub-title">JAVA</span>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "Java" %}
+                    <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
 
-        <span class="nav__sub-title">C/C++/C#</span>
+        <span class="nav__sub-title">C++/C#</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "C++" %}
