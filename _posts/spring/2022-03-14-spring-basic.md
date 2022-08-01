@@ -3,9 +3,9 @@ title:  "[Spring] 스프링 입문"
 excerpt: "Spring 입문"
 
 categories:
-  - BackEnd
+  - Spring
 tags:
-  - [BackEnd, Spring]
+  - [Spring]
 
 toc: true
 toc_sticky: true

@@ -8,8 +8,8 @@
         <span class="nav__sub-title">BACK END</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "BackEnd" %}
-                        <li><a href="/categories/backend" class="">BackEnd ({{category[1].size}})</a></li>
+                    {% if category[0] == "Spring" %}
+                        <li><a href="/categories/spring" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
