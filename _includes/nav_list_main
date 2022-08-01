@@ -13,6 +13,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Toby-Spring" %}
+                        <li><a href="/categories/toby-spring" class="">토비의 스프링 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         
         <span class="nav__sub-title">JAVA</span>
         <ul>
