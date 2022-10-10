@@ -5,6 +5,15 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
+        <span class="nav__sub-title">PROJECT</span>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "DeliveryFood" %}
+                    <li><a href="/categories/DeliveryFood" class="">DeliveryFood ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        
         <span class="nav__sub-title">BACK END</span>
             <ul>
                 {% for category in site.categories %}

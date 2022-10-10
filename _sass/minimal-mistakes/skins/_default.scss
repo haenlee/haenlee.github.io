@@ -1,30 +1,24 @@
 /* ==========================================================================
-   Default skin
+   Air skin
    ========================================================================== */
 
-// Intentionally left blank
-
 /* Colors */
-$background-color: #373C3F !default;
-$text-color: #eaeaea !default;
-$primary-color: #FFBF00 !default;
-$border-color: mix(#fff, $background-color, 20%) !default;
-$code-background-color: #4D5357 !default;
-$code-background-color-dark: #3F4447 !default;
-$form-background-color: mix(#000, $background-color, 15%) !default;
-$footer-background-color: mix(#000, $background-color, 20%) !default;
-$link-color: mix(#00adb5, $text-color, 40%) !default;
-$link-color-hover: mix(#fff, $link-color, 25%) !default;
-$link-color-visited: mix(#00adb5, $text-color, 40%) !default;
+$background-color: #eeeeee !default;
+$text-color: #222831 !default;
+$muted-text-color: #393e46 !default;
+$primary-color: #b0b0b0  !default;
+$border-color: mix(#fff, #393e46, 75%) !default;
+$code-background-color: mix(#FFBF00, #fff, 50%) !default;
+$footer-background-color: $primary-color !default;
+$link-color: #393e46 !default;
 $masthead-link-color: $text-color !default;
-$masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
-$navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
-.author__urls.social-icons .svg-inline--fa,
-.page__footer-follow .social-icons .svg-inline--fa {
-  color: inherit;
+.page__footer {
+  color: #fff !important; // override
 }
 
-.ais-search-box .ais-search-box--input {
-  background-color: $form-background-color;
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
 }
