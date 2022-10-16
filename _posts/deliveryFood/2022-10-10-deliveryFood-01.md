@@ -75,7 +75,7 @@ DelegatingFilterProxy는 단순히 웹 요청을 필터 빈에게 위임하기 �
 
 DelegatingFilterProxy는 FilterChainProxy로 요청 처리를 위임한다. FilterChainProxy는 위의 그림처럼 Security Filter 목록을 가진 SecurityFilterChain을 호출한다. 이 필터 체인을 구성하는 Security Filter들이 바로 각종 인가, 인증 등 다양한 기능을 제공하는 Spring Security의 핵심이다.
 
-그렇다면 왜 Security의 Filter들은 서블릿 컨테이너에 직접 등록되지 않고, FilterChainProxy를 거쳐서 등록되는 것일까?
+`그렇다면 왜 Security의 Filter들은 서블릿 컨테이너에 직접 등록되지 않고, FilterChainProxy를 거쳐서 등록되는 것일까?`<br>
 FilterChainProxy를 사용했을때의 장점은 다음과 같다.
 
 - Spring Security 서블릿 지원의 시작점을 제공한다. 따라서 스프링 시큐리티와 관련해서 트러블슈팅이 필요하다면 FilterChainProxy를 디버깅의 시작점으로 잡을 수 있다.
