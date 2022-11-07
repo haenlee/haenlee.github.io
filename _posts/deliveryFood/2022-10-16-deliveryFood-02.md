@@ -16,7 +16,9 @@ last_modified_at: 2022-10-16
 
 Spring Security를 적용하며 가장 중요하다고 느낀 키워드 두가지는 `UsernamePasswordAuthenticationFilter와 AuthenticationProvider` 였다.
 
-## UsernamePasswordAuthenticationFilter
+<br>
+# 🚀 UsernamePasswordAuthenticationFilter
+---
 스프링에서 Filter는 DispatcherServlet에 전달되기 전에 주로 '인증, 권한 체크'등을 하는데에 사용한다. 요청을 채가서 먼저 처리를 한다는 의미에서 Filter 비슷한 역할을 하는 Interceptor도 있지만, Interceptor와 Filter는 실행 시점이 다르다. 
 Web Context 단에서 동작하는 Filter가 Sping Context 단에서 동작하는 Interceptor보다 먼저 실행된다. 그래서 어떤 api를 타기전에 가장 먼저 실행되는 Filter에서 인증, 권한 체크를 하는 것 같다.
 
@@ -59,7 +61,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 }
 ```
 
-### attemptAuthentication
+## 📝 attemptAuthentication
 attemptAuthentication 메소드는 request로 들어온 username과 password를 가져와서 UsernamePasswordAuthenticationToken을 생성한다.
 생성된 UsernamePasswordAuthenticationToken은 AuthenticationManager를 통해 인증을 진행하도록 한다.
 
@@ -68,7 +70,9 @@ AuthenticationManager는 토큰을 받아 인증하고, Authentication을 리턴
 AuthenticationProvider의 support()가 true라면, 해당 `AuthenticationProvider의 authenticate()를 실행`하여 실제 인증을 진행하게 된다.<br>
 즉, 실제 인증은 AuthenticationProvider에서 진행되므로 AuthenticationProvider를 프로젝트에 맞게 적절히 구현하는 과정이 필요하다.
 
-## AuthenticationProvider
+<br>
+# 🚀 AuthenticationProvider
+---
 AuthenticationProvider는 DB에서 가져온 정보와 Request로 넘어온 정보를 비교하는 로직이 포함되어있는 인터페이스다.<br>
 AuthenticationProvider의 authenticate 메소드는 AuthenticationManager에서 넘겨준 Authentication객체를 가지고 ID와 PW를 조회하고 비밀번호를 비교한다.
 authenticate 메소드의 리턴타입은 UsernamePasswordAuthenticationToken으로, Authentication객체를 가지고 토큰을 생성해 리턴한다.
@@ -126,7 +130,9 @@ loadUserByUsername에서는 파라미터로 넘어온 username을 가지고 DB�
 
 해당 과정까지 구현해 주었다면 Spring Security의 인증을 사용할 수 있는 상태가 된다.
 
-## 보완해야할 점
+<br>
+# 🚀 보완해야할 점
+---
 일단 Spring Security의 인증을 사용할 수 있게 해주었지만, 아직 테스트가 부족하다. 대부분의 테스트가 로그인한 유저의 정보를 기반으로 작성되는데, 테스트를 할 때마다 로그인을 한 채로(?) 진행하기에는 어려움이 있다. 때문에 로그인한 유저로 테스트할 수 있는 환경을 만들어 줘야 한다. 
 또한 아직 디테일한 작업이 남아있다. 로그라던지, 실패시 unsuccessfulAuthentication를 구현해주지 않았다. 구현에만 급급했기 때문에 가장 기본적으로 되어야 할 로그를 작성해주지 않았는데, 추후 문제가 될만한 포인트나 확인이 되어야할 포인트에 로그를 추가할 예정이다.
 

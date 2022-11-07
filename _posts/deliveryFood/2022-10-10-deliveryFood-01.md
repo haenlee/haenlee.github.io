@@ -14,11 +14,13 @@ date: 2022-10-10
 last_modified_at: 2022-10-10
 ---
 
-프로젝트의 로그인 기능을 구현하면서 Spring Security를 적용하려고 했다. Spring Security를 적용해보려고 한 이유는 Spring Security가 보안과 관련해서 다양한 옵션을 제공해주기 때문이었다. 개발자 입장에서는 보안관련 기능을 편하게 쓸 수 있다는 장점이 있고, 무엇보다 Spring Security 관련해서 여기저기서(?) 많이 들어보았기 때문에 한번 공부해보고 싶은 마음이 컸던 것 같다.
+프로젝트의 로그인 기능을 구현하면서 Spring Security를 적용하려고 했다. Spring Security를 적용해보려고 한 이유는 Spring Security가 보안과 관련해서 다양한 옵션을 제공해주기 때문이었다. 개발자 입장에서는 보안관련 기능을 편하게 쓸 수 있다는 장점이 가장 컸다.
 
 Spring Security를 제대로 적용하기까지는 여러가지 세팅이 필요했고, 그 세팅과정이 어렵지만 한번 적용해놓으면 가져다 쓰기만 하면 돼서 초반 세팅에 시간을 쏟았었다.
 
-## Spring Security
+<br>
+# 🚀 Spring Security
+---
 Spring Security는 `엔터프라이즈 애플리케이션을 위한 인증, 권한 부여 및 기타 보안 기능을 제공하는 Java/Java EE 프레임워크`라고 한다. 설명에도 나와있듯이 Spring Security에서 가장 중요한 키워드는 인증, 권한이다. 인증, 권한을 위해서 필요한 것이 계정이고, 그 계정에 어떤 권한이 설정되는지가 중요하다.
 
 Spring Security는 주로 서블릿 필터와 이들로 구성된 필터체인을 통해 웹 요청에 대한 보안 관련 처리를 수행한다.
@@ -28,7 +30,7 @@ Spring Security는 주로 서블릿 필터와 이들로 구성된 필터체인�
 필터는 체인으로 구성될 수 있으며, 하나의 필터가 자신의 역할을 한 후, 요청과 응답 객체를 다음 필터로 넘길 수 있다.
 즉, Spring Security가 하는 일은 클라이언트의 요청이 서블릿에 도착하기 전에 여러 필터를 거치게 해서 인증, 인가 및 여러 보안처리를 하는 것이다.
 
-### 기본 용어
+## 📝 기본 용어
 - 접근 주체(Principal)
   - 보호된 리소스에 접근하는 대상
 - 인증(Authentication)
@@ -42,8 +44,10 @@ Spring Security는 주로 서블릿 필터와 이들로 구성된 필터체인�
   - 모든 리소스는 접근 제어 권한이 걸려있음
   - 인가 과정에서 해당 리소스에 대한 제한된 최소한의 권한을 가졌는지 확인
 
-## Spring Security 의 구조
-### Spring Security 동작 구조
+<br>
+# 🚀 Spring Security 의 구조
+---
+## 📝 Spring Security 동작 구조
 ![image](https://user-images.githubusercontent.com/85219306/194808856-c669ffa2-e5f1-4324-97c7-5b700a4e5aec.png)
 
 **<u>1. 로그인 정보를 담아 서버에 인증을 요청한다. (http request)</u>**
@@ -66,7 +70,7 @@ Spring Security는 주로 서블릿 필터와 이들로 구성된 필터체인�
 **<u>5. 인증제공자는 UserDetailsService를 호출하여 사용자를 가져온다.</u>**
   - 개발자는 UserDetailsService 인터페이스를 구현해야한다. UserDetailsService의 구현체에는 일반적으로 회원정보가 DB에 있다고 한다면, 사용자의 이름(ID)로 DB를 조회하여 비밀번호가 일치하는지 확인하여 인증을 처리한다. 인증이 완료되면 UsernamePasswordAuthenticationToken에 회원정보를 담아 리턴하게 된다.
 
-### FilterChainProxy와 SecurityFilterChain
+## 📝 FilterChainProxy와 SecurityFilterChain
 ![image](https://user-images.githubusercontent.com/85219306/194807784-1ca83a91-8bef-4be1-8f58-147e4c0fca4a.png)
 
 FilterChainProxy는 Spring Security가 제공하는 특별한 Filter 구현체이다.
