@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "게임 개발자는 개발중 🍊"
+title                    : "Note For Programming 🍊"
 title_separator          : "-"
 # subtitle                 : "Hello, world!"
 name                     : "haennlee"
