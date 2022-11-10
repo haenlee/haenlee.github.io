@@ -6,13 +6,13 @@
   <ul class="nav__items" id="category_tag_menu">
       <li>
         <span class="nav__sub-title">PROJECT</span>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "DeliveryFood" %}
-                    <li><a href="/categories/DeliveryFood" class="">DeliveryFood ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DeliveryFood" %}
+                        <li><a href="/categories/DeliveryFood" class="">DeliveryFood ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         
         <span class="nav__sub-title">BACK END</span>
             <ul>
@@ -24,8 +24,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Toby-Spring" %}
-                        <li><a href="/categories/toby-spring" class="">토비의 스프링 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Spring/Toby" %}
+                        <li><a href="/categories/spring/toby" class="">토비의 스프링 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -45,22 +45,29 @@
             </ul>
         
         <span class="nav__sub-title">CS</span>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "CS" %}
-                    <li><a href="/categories/cs" class="">CS ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CS" %}
+                        <li><a href="/categories/cs" class="">CS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CS/ETC" %}
+                        <li><a href="/categories/cs/etc" class="">ETC ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         
         <span class="nav__sub-title">JAVA</span>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "Java" %}
-                    <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Java" %}
+                        <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         <span class="nav__sub-title">HTML</span>
             <ul>
@@ -74,8 +81,8 @@
         <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "ETC" %}
-                        <li><a href="/categories/etc" class="">ETC ({{category[1].size}})</a></li>
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/git" class="">Git ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
