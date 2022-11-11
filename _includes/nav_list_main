@@ -9,7 +9,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "DeliveryFood" %}
-                        <li><a href="/categories/DeliveryFood" class="">DeliveryFood ({{category[1].size}})</a></li>
+                        <li><a href="/categories/delivery-food" class="">DeliveryFood ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

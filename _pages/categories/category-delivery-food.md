@@ -1,7 +1,7 @@
 ---
 title: "DeliveryFood"
 layout: archive
-permalink: /categories/DeliveryFood
+permalink: /categories/delivery-food
 author_profile: true
 sidebar_main: true
 ---
