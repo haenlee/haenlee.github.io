@@ -1,11 +1,11 @@
 ---
-title: "[DeliveryFood] Jenkins CI 적용하기"
-excerpt: ""
+title: "[DeliveryFood] 지속적인 통합을 위한 Jenkins CI 적용하기"
+excerpt: "CI적용으로 push, PR 때마다 테스트와 빌드를 자동화해보기"
 
 categories:
   -  DeliveryFood
 tags:
-  - [Project, DeliveryFood]
+  - [Project, DeliveryFood, Jenkins, 자동화, CI]
 
 toc: true
 toc_sticky: true

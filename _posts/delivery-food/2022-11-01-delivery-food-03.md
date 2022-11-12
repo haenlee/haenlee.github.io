@@ -1,6 +1,6 @@
 ---
 title: "[DeliveryFood] Jasypt 암호화"
-excerpt: ""
+excerpt: "DB 개인 정보를 숨겨보기"
 
 categories:
   -  DeliveryFood
