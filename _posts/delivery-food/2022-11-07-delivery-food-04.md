@@ -1,5 +1,5 @@
 ---
-title: "[DeliveryFood] 지속적인 통합을 위한 Jenkins CI 적용하기"
+title: "[DeliveryFood] 테스트와 빌드 자동화를 위한 Jenkins CI 적용하기"
 excerpt: "CI적용으로 push, PR 때마다 테스트와 빌드를 자동화해보기"
 
 categories:

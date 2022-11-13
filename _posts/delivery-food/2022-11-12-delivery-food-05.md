@@ -23,6 +23,11 @@ CI를 통해 통합된 코드는 에러 없이 동작 가능하다는게 증명�
 이전에 CI 적용이 끝났고, 이번엔 CD를 적용해보려고 한다. 프로젝트는 `Github Flow 브랜칭 전략`을 따르고 있기 때문에 main 브랜치에 push나 merge가 이루어지면 배포되도록 하려고 한다.
 CI를 적용했을 때처럼 Jenkins를 사용하며 기본 세팅부터가 아닌 CI 세팅이 되어 있다는 가정하에 적용을 해보았다.
 
+🔗 관련 포스트 참고  
+Docker위에 Jenkins를 설치하고 Docker 이미지를 배포할 수 있다.  
+[Docker란?](https://haenlee.github.io/cs/etc/cs-etc-06/)
+{: .notice--success}
+
 📢 **배포 과정**
 ![image](https://user-images.githubusercontent.com/85219306/201474564-fd4d9830-86ea-41db-85c8-6aa6e9fc86aa.png)
 
