@@ -25,7 +25,9 @@ CI를 적용했을 때처럼 Jenkins를 사용하며 기본 세팅부터가 아�
 
 🔗 관련 포스트 참고  
 Docker위에 Jenkins를 설치하고 Docker 이미지를 배포할 수 있다.  
-[Docker란?](https://haenlee.github.io/cs/etc/cs-etc-06/)
+[Docker란?](https://haenlee.github.io/cs/etc/cs-etc-06/)  
+배포에는 다양한 방식이 존재한다.  
+[배포 방식](https://haenlee.github.io/cs/etc/cs-etc-07/)
 {: .notice--success}
 
 📢 **배포 과정**
