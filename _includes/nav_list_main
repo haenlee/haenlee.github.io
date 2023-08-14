@@ -43,6 +43,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Web" %}
+                        <li><a href="/categories/web" class="">Web ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         <span class="nav__sub-title">DB</span>
         <ul>
@@ -111,8 +118,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Etc" %}
-                        <li><a href="/categories/etc" class="">Etc ({{category[1].size}})</a></li>
+                    {% if category[0] == "ETC" %}
+                        <li><a href="/categories/etc" class="">ETC ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
