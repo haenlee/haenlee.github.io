@@ -24,11 +24,20 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Network" %}
-                        <li><a href="/categories/network" class="">네트워크 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Web" %}
+                        <li><a href="/categories/web" class="">Web ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Game" %}
+                        <li><a href="/categories/game" class="">Game ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">SPRING</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Spring" %}
@@ -43,35 +52,35 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+
+        <span class="nav__sub-title">DB</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Web" %}
-                        <li><a href="/categories/web" class="">Web ({{category[1].size}})</a></li>
+                    {% if category[0] == "DB" %}
+                        <li><a href="/categories/db" class="">DB ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Redis" %}
+                        <li><a href="/categories/redis" class="">Redis ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>    
 
-        <span class="nav__sub-title">DB</span>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "DB" %}
-                    <li><a href="/categories/db" class="">DB ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "Redis" %}
-                    <li><a href="/categories/redis" class="">Redis ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>    
-        
         <span class="nav__sub-title">CS</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "CS" %}
                         <li><a href="/categories/cs" class="">CS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Network" %}
+                        <li><a href="/categories/network" class="">Network ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
